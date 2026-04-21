@@ -40,7 +40,7 @@ public class StaffController : ControllerBase
         if (!result)
             return BadRequest("Invalid update");
 
-        return Ok("Status updated successfully");
+        return Ok("Ticket status updated successfully");
     }
 
     // ✅ ADD COMMENT
