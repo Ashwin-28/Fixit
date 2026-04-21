@@ -54,7 +54,7 @@ public class StaffController : ControllerBase
         if (!result)
             return BadRequest("Ticket not found");
 
-        return Ok("Comment added");
+        return Ok("New comment successfully added");
     }
 
     private Guid GetUserId()
