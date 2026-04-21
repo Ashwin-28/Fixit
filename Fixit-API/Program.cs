@@ -1,11 +1,12 @@
-using System.Text;
 using Fixit_API.Data;
+using Fixit_API.Interfaces;
 using Fixit_API.Models;
 using Fixit_API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +49,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddScoped<AuthServices>();
+builder.Services.AddScoped<ITenantService, TenantService>();
 
 var app = builder.Build();
 
